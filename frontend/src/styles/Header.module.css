@@ -16,7 +16,7 @@
 .pizzaImage {
   padding: 100px 0 0 50px;
   height: auto;
-  width: 30%;
+  width: 40%;
   transform: scaleX(-1);
 }
 .headerText {
@@ -92,7 +92,7 @@
     padding: 20px 0;
   }
   .pizzaImage {
-    width: 40%;
+    width: 60%;
     padding: 0;
     margin-top: 20px;
     transform: scaleX(-1);
@@ -141,9 +141,6 @@
 /* --- Now, modify your existing .pizzaImage rule --- */
 
 .pizzaImage {
-  /* Keep your existing properties like width, height, etc. */
-  width: 400px;
-  height: 400px;
 
   /*
    * This is the key:

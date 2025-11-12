@@ -9,6 +9,8 @@
 }
 
 .menu-title {
+  position: relative;
+  z-index: 20;
   text-align: center;
   color: #333;
 }
