@@ -13,7 +13,7 @@ app.use(cors(corsOption));
 const PORT = process.env.PORT || 8080;
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));
 
 // Add this new route BEFORE your app.get("/{*splat}") route
 
@@ -24,7 +24,7 @@ app.get("/api/message", (req, res) => {
 
 // The catch-all route should always be last
 app.get('/{*splat}', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'dist', 'index.html'));
 });
 
 
