@@ -1,0 +1,58 @@
+/* --- Main Menu Structure --- */
+.menu-container {
+  font-family: 'Arial', sans-serif;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.menu-title {
+  text-align: center;
+  color: #333;
+}
+
+.menu-list, .menu-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-section {
+  margin-bottom: 2rem;
+}
+
+.menu-section h3 {
+  font-size: 1.8rem;
+  color: #e67e22;
+  margin-bottom: 1rem;
+}
+
+/* --- Menu Item Styling --- */
+.menu-item {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.item-name {
+  color: #333;
+}
+
+.item-price {
+  color: #333;
+  font-weight: bold;
+}
+
+/* --- THIS IS THE CORRECTED DOT LEADER --- */
+.dot-leader {
+  flex-grow: 1; /* Makes the div expand to fill all available space */
+  
+  /* Use a simple dotted border, which is much more reliable */
+  border-bottom: 2px dotted #aaa;
+  
+  margin: 0 0.75rem; /* Adjust space around the dots */
+  transform: translateY(-4px); /* Fine-tune the vertical alignment of the dots */
+}

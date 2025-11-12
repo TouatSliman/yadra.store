@@ -1,0 +1,157 @@
+.headerContainer {
+  /* --- Basic Container Styles --- */
+  background-image: linear-gradient(85deg, #ce5905 0%, #f59b3b 100%);
+  min-height: 90vh;
+}
+.header {
+  height: 90vh;
+  background-image: url("../assets/grid.png");
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.pizzaImage {
+  padding: 100px 0 0 50px;
+  height: auto;
+  width: 30%;
+  transform: scaleX(-1);
+}
+.headerText {
+  /* 1. Set the main color of the text */
+  color: orange;
+
+  /* 2. Set a thick, bold font to make the outline look good */
+  font-family: Arial, sans-serif; /* Choose a font that works for you */
+  font-weight: bold;
+  font-size: 6rem; /* Make it large to see the effect */
+  /*make characters closer to each other*/
+  letter-spacing: -6px;
+
+  display: flex;
+  align-items: center;
+  text-align: end;
+  padding: 100px 50px 0 0;
+  /* 3. This is the magic: Create the white outline */
+  text-shadow:
+    /* Top-left shadow */ -5px -5px 0 #fff,
+    /* Top-right shadow */ 5px -5px 0 #fff,
+    /* Bottom-left shadow */ -5px 5px 0 #fff,
+    /* Bottom-right shadow */ 5px 5px 0 #fff;
+}
+.contactList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+.contactList li {
+  font-size: 1.5rem;
+  margin: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.contactList li a {
+  color: black;
+  text-decoration: none;
+  margin-left: 10px;
+  display: flex;
+  align-items: space-between;
+}
+.contactList li button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: #fff;
+  padding: 10px 28px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.contactList li button:hover {
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 20px 0;
+  }
+  .pizzaImage {
+    width: 50%;
+    padding: 0;
+    margin-top: 20px;
+    transform: scaleX(-1);
+  }
+  .headerText {
+    font-size: 3rem;
+    padding: 0;
+    letter-spacing: -3px;
+  }
+  .contactList {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactList li {
+    justify-content: center;
+  }
+}
+/* --- Add these new @keyframes rules at the end of your file --- */
+
+/* Keyframes for the initial "fade and slide up" animation */
+@keyframes slideUpAndFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px); /* Start 40px lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at its normal position */
+  }
+}
+
+/* Keyframes for the continuous "bobbing" animation */
+@keyframes bobbing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Move 20px up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* --- Now, modify your existing .pizzaImage rule --- */
+
+.pizzaImage {
+  /* Keep your existing properties like width, height, etc. */
+  width: 400px;
+  height: 400px;
+
+  /*
+   * This is the key:
+   * 1. Run the 'slideUpAndFadeIn' animation for 1 second.
+   * 2. Then, run the 'bobbing' animation for 4 seconds, infinitely.
+   * A 1s delay is added to 'bobbing' to let the first animation finish.
+  */
+  animation: 
+    slideUpAndFadeIn 1s ease-out forwards,
+    bobbing 4s ease-in-out 1s infinite;
+}
