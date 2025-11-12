@@ -1,0 +1,12 @@
+{
+  "name": "yadra-store-monorepo",
+  "version": "1.0.0",
+  "description": "Root package for the Yadra.Store application",
+  "private": true,
+  "scripts": {
+    "start": "node backend/index.js",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install"
+  },
+  "author": "Touat Sliman",
+  "license": "ISC"
+}
