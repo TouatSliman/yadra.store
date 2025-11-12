@@ -1,10 +1,10 @@
 .headerContainer {
   /* --- Basic Container Styles --- */
   background-image: linear-gradient(85deg, #ce5905 0%, #f59b3b 100%);
-  min-height: 90vh;
+  min-height: 75vh;
 }
 .header {
-  height: 90vh;
+  height: 75vh;
   background-image: url("../assets/grid.png");
   background-size: contain;
   background-repeat: repeat-y;
@@ -16,7 +16,7 @@
 .pizzaImage {
   padding: 100px 0 0 50px;
   height: auto;
-  width: 40%;
+  width: 30%;
   transform: scaleX(-1);
 }
 .headerText {
