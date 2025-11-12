@@ -27,7 +27,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div style={{ margin: "0 auto", padding: "1rem 3rem", position: "relative"}}>
+      <div style={{ margin: "0 auto", padding: "1rem 1rem", position: "relative"}}>
         <img src={chefImage} alt="Chef" style={{ width: "10rem", height: "auto", borderRadius: "50%", position: "absolute", top: "1rem", left: "1rem" }} />
         <Menu />
         <Map />
