@@ -16,12 +16,11 @@ const Header = () => {
             </li>
             <li>
               <a href="https://www.instagram.com/oussama.sd2/" target="_blank" rel="noopener noreferrer">
-                <button>
+                
                   <BsInstagram
                     style={{ color: "#e4405f", marginLeft: "10px" }}
                   />
                   oussama
-                </button>
               </a>
             </li>
           </ul>

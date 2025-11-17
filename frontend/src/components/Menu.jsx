@@ -21,17 +21,26 @@ const Menu = () => {
         <li className="menu-section">
           <h3>ساندويتش</h3>
           <ul>
-            <MenuItem name="سبيسيال" price={250} />
-            <MenuItem name="كران" price={0} />
+            <MenuItem name="سبيسيال" price={150} />
+            <MenuItem name="فريت اوملات" price={100} />
+            <MenuItem name="كران" price={20} />
           </ul>
         </li>
-
+        {/*momalahat section*/}
+        <li className="menu-section">
+          <h3>المملحات</h3>
+          <MenuItem name="تشيز" price={100} />
+          <MenuItem name="بطبوط" price={60} />
+          <MenuItem name="ميني طاكوس" price={80} />
+        </li>
         {/* Drinks Section */}
         <li className="menu-section">
           <h3>مشروبات</h3>
           <ul>
-            <MenuItem name="سيليكتو" price={60} />
-            <MenuItem name="جي" price={20} />
+            <MenuItem name="jus Rami" price={70} />
+            <MenuItem name="Selecto/Kimo" price={40} />
+            <MenuItem name="jus daily" price={30} />
+            <MenuItem name="jus citron" price={20} />
           </ul>
         </li>
       </ul>
